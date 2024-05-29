@@ -1,4 +1,44 @@
 {
-  "name": "react_native_app_base",
-  "displayName": "react_native_app_base"
+  
+  "expo": {
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(ONLY) to access your camera",
+          "microphonePermission": "Allow $(ONLY) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "name": "BottomTabDrawer",
+    "slug": "BottomTabDrawer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "Your message here explaining why your app needs access to the camera"
+      },
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
 }
